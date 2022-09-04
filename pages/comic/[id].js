@@ -13,7 +13,6 @@ export default function Comic({ img, alt, title, width, height, hasNext, hasPrev
       <Head>
         <title>xkcd- Comics for developers</title>
         <meta name="description" content="Comics for developers" />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
 

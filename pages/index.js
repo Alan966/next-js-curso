@@ -5,7 +5,7 @@ import { Container, Card, Row, Text } from "@nextui-org/react";
 import  Header  from '../components/Header';
 import fs from 'fs/promises';
 import Link from 'next/link';
-import Footer from 'components/Footer';
+import Layout from 'components/Layout';
 
 
 export default function Home( { latestComics } ) {
@@ -16,9 +16,10 @@ export default function Home( { latestComics } ) {
         <meta name="description" content="Comics for developers" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header />
+
+      <Layout>
       <h2 className='text-3xl font-bold text-center mb-10'>Latest Comics</h2>
-      <section className='grid grid-cols-1 gap-2 max-w-md m-auto sm:grid-cols-2 md:grid-cols-3 align-baseline'>
+      <section className='grid grid-cols-1 gap-2 max-w-md m-auto sm:grid-cols-2 md:grid-cols-3 '>
       {
         latestComics.map( comic =>{
           return(
@@ -32,8 +33,7 @@ export default function Home( { latestComics } ) {
         })
       }
       </section>
-
-      <Footer />
+      </Layout>
     </>
   )
 }
