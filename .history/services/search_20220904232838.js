@@ -1,7 +1,7 @@
 const algoliasearch = require('algoliasearch');
 
-const APP_ID = process.env.APP_ID
-const APP_KEY = process.env.APP_KEY
+const APP_ID = 'HYOR88HI7T'
+const APP_KEY = '49e720cfc6e3a4ccee958b87086328a3'
 
 const client = algoliasearch( APP_ID, APP_KEY );
 const index = client.initIndex('replica-midudev');

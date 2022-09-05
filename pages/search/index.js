@@ -3,15 +3,17 @@ import Head from 'next/head'
 import { search } from 'services/search.js'
 import Link from 'next/link'
 import Image from 'next/image'
+import { useI18N } from 'context/i18n';
 
 export default function Componet ({query, results}){
+
+  const {t} = useI18N()
     return <>
     <Head>
-        <title>xkcd- Result for {query}</title>
         <meta name="description" content={`Search results for ${query}`} />
     </Head>
     <Layout>
-    <h1>{('SEARCH_RESULTS_TITLE', results.length, query)}</h1>
+    <h1>{t('SEARCH_RESULTS_TITLE', results.length, query)}</h1>
       {
         results.map(result => {
           return (
